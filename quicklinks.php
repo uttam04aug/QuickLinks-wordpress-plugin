@@ -47,7 +47,7 @@ function quicklinks_admin_page() {
     if (isset($_POST['ql_save'])) {
         $data = [
             'title' => sanitize_text_field($_POST['title']), 
-            'url'   => esc_url_raw($_POST['url']) // URL ko sanitize kar rahe hain
+            'url'   => esc_url_raw($_POST['url']) // URL sanitize
         ];
         if (!empty($_POST['id'])) { 
             $wpdb->update($table, $data, ['id' => intval($_POST['id'])]); 
@@ -105,7 +105,7 @@ add_shortcode('quicklinks', function () {
 
     $items = '';
     foreach ($links as $link) {
-        // inline-block aur no-wrap force kiya gaya hai
+        // inline-block & no-wrap force 
         $items .= '<a target="_blank" href="'.esc_url($link->url).'" style="display:inline-block !important; color:#000 !important; text-decoration:none !important; padding:0 15px !important; font-weight:bold !important; font-size:14px !important; white-space:nowrap !important;"><span style="color:#000 !important; margin-right:5px !important;">✔</span>'.esc_html($link->title).'</a>';
     }
 
