@@ -1,9 +1,13 @@
 <?php
 /*
 Plugin Name: QuickLinks
-Description:Horizontal Scroll for QuickLinks
-Version: 1.0
+Plugin URI: https://github.com/uttam04aug/QuickLinks-wordpress-plugin
+Description: Quick links plugin for WordPress
+Version: 1.0.0
 Author: Uttam Singh
+Author URI: https://github.com/uttam04aug
+License: GPL v2 or later
+Text Domain: quicklinks
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
